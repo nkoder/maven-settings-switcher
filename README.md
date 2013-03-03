@@ -27,11 +27,14 @@ mvs -l
 
 ## Installation
 
-1. Rename `mvs.rb` to `mvs` and ensure it is somewhere on `PATH`.
-2. Copy `mvs.bash` to `/etc/bash_completion.d/`.
+The provided `Rakefile` has an `install` task which copies `mvs` to `/usr/bin/` and `mvs.bash` to `/etc/bash_completion.d`.
+```
+sudo rake install
+```
 
 ## Operation
 
 `mvs` stores the settings files in `~/.mvn-settings/files`.
 
 Beware that `mvs` is absolutely **not** foolproof. Use with caution.
+It will most likely only work on Linux because it uses the `fcntl` POSIX system call.
