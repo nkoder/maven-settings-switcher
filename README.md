@@ -34,4 +34,4 @@ mvs -l
 
 `mvs` stores the settings files in `~/.mvn-settings/files`.
 
-Beware that `mvs` is absolutely *NOT* foolproof. Use with caution.
+Beware that `mvs` is absolutely **not** foolproof. Use with caution.
