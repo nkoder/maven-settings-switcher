@@ -31,7 +31,8 @@ end
 # Returns the name under which the current ~/.m2/settings.xml is stored
 def current_name
   stored_files.find do |stored_file_name|
-    return stored_file_name if FileUtils.compare_file(SETTINGS_XML, stored_file_name)
+    return nil unless File.exist?(SETTINGS_XML)
+    return File.basename(stored_file_name) if FileUtils.compare_file(SETTINGS_XML, stored_file_name)
   end
 end
 
