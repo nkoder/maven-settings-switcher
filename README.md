@@ -27,7 +27,7 @@ mvs -l
 
 ## Installation
 
-The provided `Rakefile` has an `install` task which copies `mvs` to `/usr/bin/` and `mvs.bash` to `/etc/bash_completion.d`.
+The provided `Rakefile` has an `install` task which copies `mvs` to `/usr/bin` and `mvs.bash` to `/etc/bash_completion.d`.
 ```
 sudo rake install
 ```
