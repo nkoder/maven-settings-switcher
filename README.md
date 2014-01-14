@@ -3,9 +3,14 @@ Maven settings switcher
 
 Do you need to switch between many Maven settings files? Try `mvs`.
 
+**nkoder: tested under Cygwin64 on Windows 8.1**
+
 ## Usage
 
 ### Store a settings file
+
+**nkoder: this one doesn't work on my environment so I just copy settings files to .mvn-settings/files**
+
 ```
 cat nexus-settings.xml | mvs nexus
 ```
