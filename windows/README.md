@@ -24,7 +24,7 @@ Put settings file into ```%USERPROFILE%\.m2\mvs-settings-files``` directory (you
 ### List stored settings files
 
     ```
-    mvs list
+    mvs
     ```
     
 The result will be (assuming that ```another-settings.xml``` is the current content of ```%USERPROFILE%\.m2\settings.xml```):
