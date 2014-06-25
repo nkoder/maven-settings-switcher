@@ -19,7 +19,7 @@ Beware that settings in ```%USERPROFILE%\.m2\settings.xml``` will be overwritten
 
 ### Store a settings file
 
-Put settings file into ```%USERPROFILE%\.m2\.settings``` directory (you should create it).
+Put settings file into ```%USERPROFILE%\.m2\mvs-settings-files``` directory (you should create it).
 
 ### List stored settings files
 
