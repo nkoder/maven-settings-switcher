@@ -1,8 +1,17 @@
 require 'fileutils'
 
 task :install do
-  FileUtils.mkdir_p("/cygdrive/c/Users/nkoder/.mvn-settings/files/")
-  FileUtils.cp("mvs.bash", "/etc/bash_completion.d/")
-  FileUtils.cp("mvs.rb", "/usr/bin/mvs")
-  FileUtils.chmod(0755, "/usr/bin/mvs")
+   HOME = File.expand_path("~")
+   puts "Using #{HOME} as home directory..."
+
+   STORAGE = "#{HOME}/.mvn-settings/files"
+   puts "MVN settings will be stored in #{STORAGE}"
+   FileUtils.mkdir_p("#{HOME}/.mvn-settings/files")
+
+   puts "Copying mvs files to system"
+   FileUtils.cp("mvs.bash", "/etc/bash_completion.d/")
+   FileUtils.cp("mvs.rb", "/usr/bin/mvs")
+   FileUtils.chmod(0755, "/usr/bin/mvs")
+
+   puts "Remember to change access rights for #{STORAGE}"
 end

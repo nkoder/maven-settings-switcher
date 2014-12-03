@@ -1,7 +1,7 @@
 #!/bin/sh
 _mvs() {
   local cur="${COMP_WORDS[COMP_CWORD]}"
-  settings=`ls /cygdrive/c/Users/nkoder/.mvn-settings/files/`
+  settings=`ls ~ /.mvn-settings/files/`
   COMPREPLY=( $(compgen -W "$settings" -- $cur) )
 }
 

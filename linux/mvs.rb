@@ -1,5 +1,4 @@
 #!/usr/bin/ruby
-# MODIFIED: /cygdrive/c/Users/nkoder/.m2 instead of ~/.m2
 
 require "fileutils"
 require "fcntl"
@@ -21,15 +20,15 @@ Write new (reads STDIN)
 "
 end
 
-SETTINGS_XML = File.expand_path("/cygdrive/c/Users/nkoder/.m2/settings.xml")
-STORE = File.expand_path("/cygdrive/c/Users/nkoder/.mvn-settings/files")
+SETTINGS_XML = File.expand_path("~/.m2/settings.xml")
+STORE = File.expand_path("~/.mvn-settings/files")
 
 # Array of stored files
 def stored_files
   Dir["#{STORE}/*"]
 end
 
-# Returns the name under which the current /cygdrive/c/Users/nkoder/.m2/settings.xml is stored
+# Returns the name under which the current ~/.m2/settings.xml is stored
 def current_name
   stored_files.find do |stored_file_name|
     return nil unless File.exist?(SETTINGS_XML)
